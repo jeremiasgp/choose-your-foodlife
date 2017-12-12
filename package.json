@@ -1,0 +1,28 @@
+{
+  "name": "choose-your-foodlife",
+  "version": "1.0.0",
+  "description": "Ux game, choose your foodlife. Animals and food awarnes",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremiasgp/choose-your-foodlife.git"
+  },
+  "keywords": [
+    "food",
+    "ux",
+    "foodlife",
+    "game"
+  ],
+  "author": "Ux Team and JGP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremiasgp/choose-your-foodlife/issues"
+  },
+  "homepage": "https://github.com/jeremiasgp/choose-your-foodlife#readme",
+  "dependencies": {
+    "rxjs": "^5.5.5"
+  }
+}
