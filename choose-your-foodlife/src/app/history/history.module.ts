@@ -18,5 +18,5 @@ import { HistoryService } from './history.service';
         HistoryStepComponent,
         StatsComponent,
     ],
-});
+})
 export class HistoryModule {}

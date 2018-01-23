@@ -1,11 +1,29 @@
 // settings
-
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 // Mixins
 
 // generics
 
 // elements
+html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
 
 // components
+.app-wrapper {
+    height:100vh;
+}
+.app-header {
+    flex:0 0 15%;
+}
+.app-footer {
+    flex: 0 0 10%;
+}
+.app-main {
+    flex: 0 0 75%;
+}
 
 // utils

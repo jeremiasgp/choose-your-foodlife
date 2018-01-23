@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-history-step',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history-step.component.css']
 })
 export class HistoryStepComponent implements OnInit {
+  @Input() stepInfo: any;
 
   constructor() { }
 
