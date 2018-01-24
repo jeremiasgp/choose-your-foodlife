@@ -1,4 +1,3 @@
-<app-history-step [stepInfo]="actualStep"></app-history-step>
-
-
+<app-history-step [stepInfo]="actualStep" (stepChoose)="goStep($event)"></app-history-step>
 <app-stats></app-stats>
+{{money}}

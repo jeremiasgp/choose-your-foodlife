@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IHistoryModel } from './history.model';
+import { HistoryService } from './history.service';
 
 @Component({
   selector: 'app-history',
@@ -7,12 +8,35 @@ import { IHistoryModel } from './history.model';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent implements OnInit {
-  actualStep = {
-    text: 'Debes abastecerte para alimentarte durante el mes vegetariano. Hoy hay un descuento del 40% en el supermercado local, querés aprovecharlo?',
-  };
-  constructor() { }
+  actualStep: IHistoryModel;
+  step = 0;
+  money = 0;
+
+  constructor(private service: HistoryService) { }
 
   ngOnInit() {
+    this.service.getHistory().subscribe(
+      () => {
+        this.actualStep = this.service.history[this.step];
+        this.service.money = 2000;
+        this.service.health = 100;
+        this.service.day = 1;
+        this.service.social = 100;
+        this.service.actualMoney.subscribe( m => this.money = m );
+      }
+    );
+  }
+
+  goStep(opt: any) {
+    if(opt.sentence !== undefined){
+      alert(opt.sentence);
+    }
+    if(this.step + 1 < this.service.history.length){
+      this.step++;
+      this.actualStep = this.service.history[this.step];
+    }else{
+      alert("FIN");
+    }
   }
 
 }

@@ -1,0 +1,10 @@
+[
+    {
+        "text" : "Debes abastecerte para alimentarte durante el mes vegetariano. Hoy hay un descuento del 40% en el supermercado local, querés aprovecharlo?",
+        "options" : [
+            { "label" : "Voy después", "money" : 0, "health" : 0, "social" : 30, "sentence": "Improvisar con la comida puede generar efectos negativos en la salud.", "time" : 1600 },
+            { "label" : "15 días", "money" : -200, "health" : 0, "social" : 30, "sentence": "conservantes y cuanto dura la comida", "time" : 1600 },
+            { "label" : "30 días", "money" : -400, "health" : 0, "social" : 30, "sentence": "conservantes y cuanto dura la comida", "time" : 1600 }
+        ]
+    }
+]
