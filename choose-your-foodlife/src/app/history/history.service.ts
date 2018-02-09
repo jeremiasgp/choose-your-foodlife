@@ -27,11 +27,7 @@ export class HistoryService {
     }
 
     set money(m: number){
-        console.log(this._money);
-        console.log('antes');
         this._money = this._money + m;
-        console.log(m);
-        console.log(this._money);
         this.actualMoney.emit(this._money);
     }
     set social(s: number){
