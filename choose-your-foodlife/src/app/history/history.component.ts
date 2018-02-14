@@ -22,10 +22,10 @@ export class HistoryComponent implements OnInit {
     this.service.getHistory().subscribe(
       () => {
         this.actualStep = this.service.history[this.step];
-        this.service.money = 2000;
-        this.service.health = 100;
+        this.service.money = 5000;
+        this.service.health = 10;
         this.service.day = 1;
-        this.service.social = 100;
+        this.service.social = 0;
         this.service.actualMoney.subscribe( m => this.money = m );
       }
     );

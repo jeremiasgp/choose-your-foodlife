@@ -14,16 +14,49 @@ html {
 
 // components
 .app-wrapper {
-    height:100vh;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+
+    .polygon-bg {
+        position:absolute;
+        height:100%;
+        width:50%;
+        left: -25%;
+        top: 0;
+        bottom: 0;
+        background: #32c790;
+        /*-ms-transform: skewX(15deg);
+        -webkit-transform: skewX(15deg);*/
+        transform: skewX(15deg);
+        z-index:-1;
+        
+    }
 }
 .app-header {
-    flex:0 0 15%;
-}
-.app-footer {
-    flex: 0 0 10%;
+    flex-basis:20vh;
+    height: 20vh;
+    align-self: left;
+    padding:0 1rem;
+    img {
+        max-height: 100%;
+        width: auto;
+    }
 }
 .app-main {
-    flex: 0 0 75%;
+    flex-basis:80vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    .ew-card {
+        background-color: #fff;
+        padding: 2rem 1rem;
+        margin-bottom:2rem;
+        width:80%;
+        margin:0 auto;
+        box-shadow:5px 5px 5px #999999;
+        border:1px solid #999999;
+    }
 }
 
 // utils

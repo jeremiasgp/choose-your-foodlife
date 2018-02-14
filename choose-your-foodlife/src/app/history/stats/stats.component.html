@@ -1,10 +1,23 @@
-<div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 ">
-    <div class="d-flex justify-content-around">
-        <span class="h2">Money: ${{money}}</span>
-        <span class="h2">Health: {{health}}</span>
-        <span class="h2">Social: {{social}}</span>
+<div class="col-12 mb-4">
+    <div class="d-flex justify-content-between mb-2">
+        <div class="text-center">
+            <span class="h2 text-center">${{money}}</span><br />
+            <small>BALANCE</small>
+        </div>
+        <div class="text-center">
+            <span class="h2 text-center">{{social}}</span><br />
+            <small>SOCIAL STRIKES</small>
+        </div>
+        <div class="text-center">
+            <span class="h2">{{health}}</span><br />
+            <small>SALUD</small>
+        </div>    
+        
     </div>
     <div class="progress">
         <div class="progress-bar" style="width:34%"></div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <span *ngFor="let day of numbers">{{day}}</span>
     </div>
 </div>

@@ -12,6 +12,7 @@ export class StatsComponent implements OnInit {
   health: number;
   social: number;
   day: number;
+  numbers: number[];
 
   constructor(private service: HistoryService) { }
 
@@ -20,6 +21,8 @@ export class StatsComponent implements OnInit {
     this.service.actualHealth.subscribe( h => this.health = h );
     this.service.actualMoney.subscribe( m => this.money = m );
     this.service.actualSocial.subscribe( s => this.social = s );
+    this.numbers = [];
+    for (let i = 1; i <= 30; i++) { this.numbers.push(i); }
   }
 
 }
